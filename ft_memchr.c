@@ -9,5 +9,11 @@
 /*   Updated: 2022/07/26 18:15:28 by ael-b      *      :#    #: #  ::#####    */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
+void *memchr(const void *s, int c, size_t n)
+{
 
+}
