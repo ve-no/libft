@@ -13,7 +13,27 @@
 #include <stdio.h>
 #include <string.h>
 
-void *memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
+	unsigned char	*str;
 
+	str = (unsigned char *)s;
+	while (n-- != 0)
+	{
+		if (*str == (unsigned char)c)
+			return (str);
+		str++;
+	}
+	return (NULL);
 }
+// int main () {
+//    const char str[] = "http://www.tutorialspoint.com";
+//    const char ch = '?';
+//    char *ret;
+
+//    ret = ft_memchr(str, ch, strlen(str));
+
+//    printf("String after |%c| is - |%s|\n", ch, ret);
+
+//    return(0);
+// }
