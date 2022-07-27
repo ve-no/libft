@@ -37,7 +37,6 @@ char	*ft_strnstr(const	char *haystack, const	char *needle, size_t len)
 	}
 	return (0);
 }
-
 // int main() {
 //   char *hay = "hello world ana jay";
 //   char *nee = "world";
