@@ -20,8 +20,8 @@ char	*strchr(const char *s, int c)
 	while (str[i] != (char) c)
 	{
 		if (str[i] == '\0')
-			return (NULL);
-			++i;
+			return (0);
+		++i;
 	}
 	return (str + i);
 }
