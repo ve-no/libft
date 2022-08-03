@@ -18,21 +18,34 @@ char *ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
 	int		i;
-	int		len_s1;
-	int		len_s2;
+	int		k;
 
-	len_s1 = strlen(s1);
-	len_s2 = strlen(s2);
-	str = (char *)malloc( len_s1 + len_s2 + 1);
+	k = strlen(s1) + strlen(s2) +1 ;
+	str = (char *)malloc( k);
+	if (!str)
+		return (NULL);
 	str = strdup(s1);
 	i = 0;
-	while (i < len_s2)
-		str[len_s1++] = s2[i++];
-	str[len_s1++] = '\0';
-	return str;
+	k = 0;
+	while (i < strlen(s1) )
+		str[k++] = s1[i++];
+	i = 0;
+	while (i < strlen(s2) )
+		str[k++] = s2[i++];
+	str[k] = '\0';
+	return (str);
 }
 int main()
 {
 	printf(":%s:\n", ft_strjoin("helo, world!", "ksjghks"));
 }
 
+
+
+
+	// if (!s1 && !s2)
+	// 	return (ft_strdup(""));
+	// if (s1 && !s2)
+	// 	return (ft_strdup(s1));
+	// if (!s1 && s2)
+	// 	return (ft_strdup(s2));
