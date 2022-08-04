@@ -24,11 +24,9 @@ char *ft_strtrim(char const *s1, char const *set)
 	len = (int)strlen(s1) - 1;
 	if (!s1)
 		return (NULL);
-	while (ptr[len] == ' ' || ptr[len] == '\t' || ptr[len] == '\n'
-		|| ptr[len] == '\v' || ptr[len] == '\f' || ptr[len] == '\r')
+	while (ptr[len] == ' ' || ptr[len] == '\n' || ptr[len] == '\t')
 		len--;
-	while (ptr[i] == ' ' || ptr[i] == '\t' || ptr[i] == '\n'
-		|| ptr[i] == '\v' || ptr[i] == '\f' || ptr[i] == '\r')
+	while (trim[i] == ' ' || trim[i] == '\n' || trim[i] == '\t')
 		i++;
 	ptr = ft_substr(s1, i, len - i + 1);
 	return ptr;
