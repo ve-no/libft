@@ -31,7 +31,6 @@ char *ft_strtrim(char const *s1, char const *set)
 	ptr = ft_substr(s1, i, len - i + 1);
 	return ptr;
 }
-
 // int main()
 // {
 // 	char s1[] = "      hello f da world     	";
