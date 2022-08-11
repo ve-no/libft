@@ -16,31 +16,33 @@
 void	*ft_memset(void *s, int c, size_t n)
 {
 	char	*p;
+	size_t	i;
 
+	i = 0;
 	p = (char *)s;
-	while (n--)
+	while (i < n)
 	{
-		*p = (char)c;
-		p++;
+		p[i] = (char)c;
+		i++;
 	}
 	return (p);
 }
 
-int	main(void)
-{
-	char	*arr;
-	int		n;
-	int		i;
+// int	main(void)
+// {
+// 	char	*arr;
+// 	int		n;
+// 	int		i;
 
-	arr = malloc(1);
-	n = 5;
-	i = 0;
-	ft_memset (arr, 2, n * sizeof(arr[0]));
-	printf("Array after memset()\n");
-	while (i < n)
-	{
-		printf("%d", arr[i]);
-		i++;
-	}
-	return (0);
-}
+// 	arr = malloc(1);
+// 	n = 5;
+// 	i = 0;
+// 	ft_memset (arr, 2, n * sizeof(arr[0]));
+// 	printf("Array after memset()\n");
+// 	while (i < n)
+// 	{
+// 		printf("%d", arr[i]);
+// 		i++;
+// 	}
+// 	return (0);
+// }
