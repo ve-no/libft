@@ -28,16 +28,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[j] = '\0';
 	return (str);
 }
-int main()
-{
-	char src[] = "substr function Implementation";
+// int main()
+// {
+// 	char src[] = "substr function Implementation";
 
-	int m = 9;
-	int n = 10;
+// 	int m = 9;
+// 	int n = 10;
 
-	char* dest = ft_substr(src, m, n);
+// 	char* dest = ft_substr(src, m, n);
 
-	printf("%s\n", dest);
+// 	printf("%s\n", dest);
 
-	return 0;
-}
+// 	return 0;
+// }
