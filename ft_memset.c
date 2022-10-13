@@ -5,44 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/25 13:40:51 by ael-b             #+#    #+#             */
-/*   Updated: 2022/10/11 10:47:55 by ael-bako         ###   ########.fr       */
+/*   Created: 2022/10/06 08:17:51 by ael-bako          #+#    #+#             */
+/*   Updated: 2022/10/07 09:14:33 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	char	*p;
-	size_t	i;
+	unsigned char	*str;
 
-	i = 0;
-	p = (char *)s;
-	while (i < n)
+	str = (unsigned char *)b;
+	while (len)
 	{
-		p[i] = (char)c;
-		i++;
+		*str = (unsigned char) c;
+		str++;
+		len--;
 	}
-	return (p);
+	return (b);
 }
-
-// int	main(void)
-// {
-// 	char	*arr;
-// 	int		n;
-// 	int		i;
-
-// 	arr = malloc(1);
-// 	n = 5;
-// 	i = 0;
-// 	ft_memset (arr, 2, n * sizeof(arr[0]));
-// 	printf("Array after memset()\n");
-// 	while (i < n)
-// 	{
-// 		printf("%d", arr[i]);
-// 		i++;
-// 	}
-// 	return (0);
-// }

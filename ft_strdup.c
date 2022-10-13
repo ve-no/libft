@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                              *       ::##::  #  ::#####    */
-/*   ft_strdup.c                                *      ::    :: . ::          */
-/*                                              *      ::    :: . ::          */
-/*   By: ael-bako <ael-bako@outlook.com>        *      ::####:: # ::####      */
-/*                                              *      :#    #: . ::          */
-/*   Created: 2022/07/28 17:51:02 by ael-b      *      #:    :# . ::          */
-/*   Updated: 2022/07/28 17:51:04 by ael-b      *      :#    #: #  ::#####    */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/07 13:37:23 by ael-bako          #+#    #+#             */
+/*   Updated: 2022/10/07 13:51:33 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <stdlib.h>
+
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+char	*ft_strdup(const char *s1)
 {
-	char	*str;
+	size_t	size;
 	size_t	i;
+	char	*str;
 
+	size = ft_strlen(s1) + 1;
 	i = 0;
-	while (s[i])
-		i++;
-	str = (char *)malloc(i + 1);
+	str = (char *)malloc(size);
 	if (!str)
 		return (NULL);
-	ft_memcpy(str, s, i);
+	while (s1[i])
+	{
+		str[i] = s1[i];
+		i++;
+	}
+	str[i] = '\0';
 	return (str);
 }
-// int main()
-// {
-// 	char    str[] = "allal";
-// 	printf("%s\n", ft_strdup(str));
-// }

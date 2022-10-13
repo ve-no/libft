@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 14:45:12 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/10/06 13:49:14 by ael-bako         ###   ########.fr       */
+/*   Created: 2022/10/12 11:37:03 by ael-bako          #+#    #+#             */
+/*   Updated: 2022/10/13 17:07:44 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+#include "libft.h"
+
+t_list	*ft_lstnew(void *content)
 {
-	if (c <= 127 && c >= 0)
-		return (1);
-	return (0);
+	t_list	*lnew;
+
+	lnew = (t_list *)malloc(sizeof(t_list));
+	if (!lnew)
+		return (NULL);
+	lnew -> content = content;
+	lnew -> next = NULL;
+	return (lnew);
 }

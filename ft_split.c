@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                              *       ::##::  #  ::#####    */
-/*   ft_split.c                                 *      ::    :: . ::          */
-/*                                              *      ::    :: . ::          */
-/*   By: ael-bako <ael-bako@outlook.com>        *      ::####:: # ::####      */
-/*                                              *      :#    #: . ::          */
-/*   Created: 2022/10/09 11:53:00 by ael-b      *      #:    :# . ::          */
-/*   Updated: 2022/10/09 11:53:12 by ael-b      *      :#    #: #  ::#####    */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/08 18:40:38 by ael-bako          #+#    #+#             */
+/*   Updated: 2022/10/10 14:05:18 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 int	count_w(const char *s, char c)
 {
@@ -44,7 +44,7 @@ char	*w_dup(char const *s, int start, int fin)
 	int		i;
 	char	*str;
 
-	str = malloc(fin - start + 1);
+	str = malloc((fin - start) + 1);
 	if (!str)
 		return (NULL);
 	i = 0;
@@ -80,6 +80,14 @@ char	**ft_split(char const *s, char c)
 		}
 		i++;
 	}
-	ptr[j] = '\0';
+	ptr[j] = 0;
 	return (ptr);
 }
+// int	main() {
+//   char		**ptr;
+//   size_t	i;
+//   ptr = ft_split("cccchellocccworldccccjumiaccccc.macccaji",'c');
+//   for (i = 0; i < 4; i++)
+//     printf("%s\n", ptr[i]);
+//   return 0;
+// }

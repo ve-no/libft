@@ -1,40 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                              *       ::##::  #  ::#####    */
-/*   ft_atoi.c                                  *      ::    :: . ::          */
-/*                                              *      ::    :: . ::          */
-/*   By: ael-bako <ael-bako@outlook.com>        *      ::####:: # ::####      */
-/*                                              *      :#    #: . ::          */
-/*   Created: 2022/07/26 18:55:49 by ael-b      *      #:    :# . ::          */
-/*   Updated: 2022/07/26 18:55:52 by ael-b      *      :#    #: #  ::#####    */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/06 12:38:44 by ael-bako          #+#    #+#             */
+/*   Updated: 2022/10/07 09:18:23 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
-int	ft_atoi(const char *nptr)
+#include "libft.h"
+
+int	ft_atoi(const char *str)
 {
-	int	sign;
 	int	i;
-	int	res;
+	int	rslt;
+	int	sign;
 
 	i = 0;
+	rslt = 0;
 	sign = 1;
-	res = 0;
-	while (nptr[i] == ' ' || nptr[i] == '\t' || nptr[i] == '\n'
-		|| nptr[i] == '\v' || nptr[i] == '\f' || nptr[i] == '\r')
-			i++;
-	if (nptr[i] == '+' || nptr[i] == '-')
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
+		|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
 	{
-		if (nptr[i] == '-')
+		i++;
+	}
+	if (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
 			sign = -1;
 		i++;
 	}
-	while (nptr[i] >= '0' && nptr[i] <= '9')
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		res = res * 10 + nptr[i] - 48;
+		rslt = rslt * 10 + str[i] - 48;
 		i++;
 	}
-	return (res * sign);
+	return (rslt * sign);
 }

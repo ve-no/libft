@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                              *       ::##::  #  ::#####    */
-/*   ft_strlcat.c                               *      ::    :: . ::          */
-/*                                              *      ::    :: . ::          */
-/*   By: ael-bako <ael-bako@outlook.com>        *      ::####:: # ::####      */
-/*                                              *      :#    #: . ::          */
-/*   Created: 2022/07/27 21:13:48 by ael-b      *      #:    :# . ::          */
-/*   Updated: 2022/07/27 21:13:52 by ael-b      *      :#    #: #  ::#####    */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/07 14:20:25 by ael-bako          #+#    #+#             */
+/*   Updated: 2022/10/07 14:44:31 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
@@ -32,11 +31,3 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[dest_len] = 0;
 	return (res);
 }
-// int	main(void)
-// {
-// 	char	dest[] = "hello dest";
-// 	char	src[]= "world ";
-
-// 	printf("%ld \n", ft_strlcat(dest, src, 12));
-// 	printf("%s\n", dest);
-// }

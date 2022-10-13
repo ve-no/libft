@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                              *       ::##::  #  ::#####    */
-/*   ft_strlcpy.c                               *      ::    :: . ::          */
-/*                                              *      ::    :: . ::          */
-/*   By: ael-bako <ael-bako@outlook.com>        *      ::####:: # ::####      */
-/*                                              *      :#    #: . ::          */
-/*   Created: 2022/07/27 20:04:46 by ael-b      *      #:    :# . ::          */
-/*   Updated: 2022/07/27 20:04:47 by ael-b      *      :#    #: #  ::#####    */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/07 10:14:29 by ael-bako          #+#    #+#             */
+/*   Updated: 2022/10/07 14:02:47 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
@@ -28,12 +27,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	}
 	return (str_len);
 }
-
-// int	main(void)
-// {
-// 	char	dest[] = "hell";
-// 	char	src[]= "hello";
-
-// 	printf("%ld \n", ft_strlcpy(dest, src, 5));
-// 	printf("%s\n", dest);
-// }

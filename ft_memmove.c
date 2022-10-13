@@ -1,18 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 14:45:12 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/10/06 13:49:14 by ael-bako         ###   ########.fr       */
+/*   Created: 2022/10/07 09:20:13 by ael-bako          #+#    #+#             */
+/*   Updated: 2022/10/11 10:51:16 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+#include "libft.h"
+
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	if (c <= 127 && c >= 0)
-		return (1);
-	return (0);
+	unsigned char	*s1;
+	unsigned char	*s2;
+
+	if (!dst || !src)
+		return (NULL);
+	if (dst < src)
+		ft_memcpy (dst, src, len);
+	else
+	{
+		s1 = (unsigned char *)(dst + (len - 1));
+		s2 = (unsigned char *)(src + (len - 1));
+		while (len--)
+			*s1-- = *s2--;
+	}
+	return (dst);
 }

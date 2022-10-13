@@ -1,18 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                              *       ::##::  #  ::#####    */
-/*   ft_strtrim.c                               *      ::    :: . ::          */
-/*                                              *      ::    :: . ::          */
-/*   By: ael-bako <ael-bako@outlook.com>        *      ::####:: # ::####      */
-/*                                              *      :#    #: . ::          */
-/*   Created: 2022/08/03 17:55:59 by ael-b      *      #:    :# . ::          */
-/*   Updated: 2022/08/03 17:56:02 by ael-b      *      :#    #: #  ::#####    */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/07 18:26:31 by ael-bako          #+#    #+#             */
+/*   Updated: 2022/10/08 18:42:45 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <stdlib.h>
 
-char *ft_strtrim(char const *s1, char const *set)
+#include "libft.h"
+#include <string.h>
+
+int	check_set(char const *set, int s)
+{
+	int	i;
+
+	i = 0;
+	while (set[i] != '\0')
+	{
+		if (set[i] == s)
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		len;
 	char	*ptr;
@@ -20,19 +35,15 @@ char *ft_strtrim(char const *s1, char const *set)
 
 	i = 0;
 	ptr = (char *)s1;
-	len = (int)strlen(s1) - 1;
+	len = (int)ft_strlen (s1) - 1;
 	if (!s1)
 		return (NULL);
-	while (ptr[len] == ' ' || ptr[len] == '\n' || ptr[len] == '\t')
+	while (ptr[len] && check_set(set, ptr[len]))
 		len--;
-	while (trim[i] == ' ' || trim[i] == '\n' || trim[i] == '\t')
+	if (len < 0)
+		return (ft_strdup(""));
+	while (ptr[i] && check_set(set, ptr[i]))
 		i++;
 	ptr = ft_substr(s1, i, len - i + 1);
-	return ptr;
+	return (ptr);
 }
-// int main()
-// {
-// 	char s1[] = "      hello f da world     	";
-// 	char *set;
-// 	printf(":%s:\n", ft_strtrim(s1, set));
-// }

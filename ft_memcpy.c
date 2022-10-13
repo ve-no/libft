@@ -1,48 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                              *       ::##::  #  ::#####    */
-/*   ft_memcpy.c                                *      ::    :: . ::          */
-/*                                              *      ::    :: . ::          */
-/*   By: ael-bako <ael-bako@outlook.com>        *      ::####:: # ::####      */
-/*                                              *      :#    #: . ::          */
-/*   Created: 2022/07/25 22:44:57 by ael-b      *      #:    :# . ::          */
-/*   Updated: 2022/07/25 22:45:03 by ael-b      *      :#    #: #  ::#####    */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/06 09:59:44 by ael-bako          #+#    #+#             */
+/*   Updated: 2022/10/08 12:53:35 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t	i;
-	char	*s;
-	char	*d;
+	size_t			i;
+	unsigned char	*dest;
+	unsigned char	*str;
 
 	i = 0;
-	s = (char *) src;
-	d = (char *) dest;
-	if (!d && !s)
-		return (0);
-	while (i < n)
+	dest = (unsigned char *) dst;
+	str = (unsigned char *) src;
+	if (!dest && !str)
+		return (NULL);
+	while (n > i)
 	{
-		d[i] = s[i];
+		dest[i] = str[i];
 		i++;
 	}
 	return (dest);
 }
-
-// int main(void)
-// {
-// 	char	dest[] = "world";
-// 	char	src[] = "hello world";
-// 	size_t    n;
-
-// 	size_t i = 2;
-// 	// ft_memcpy(dest, src, i);
-// 	printf("%s\n", ft_memcpy(dest, src, i));
-// 	// memcpy(dest, src, i);
-// 	printf("%s\n", dest);
-
-// }

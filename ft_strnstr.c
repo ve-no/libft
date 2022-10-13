@@ -1,47 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                              *       ::##::  #  ::#####    */
-/*   ft_strnstr.c                               *      ::    :: . ::          */
-/*                                              *      ::    :: . ::          */
-/*   By: ael-bako <ael-bako@outlook.com>        *      ::####:: # ::####      */
-/*                                              *      :#    #: . ::          */
-/*   Created: 2022/07/27 22:54:23 by ael-b      *      #:    :# . ::          */
-/*   Updated: 2022/07/27 22:54:26 by ael-b      *      :#    #: #  ::#####    */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/07 15:43:37 by ael-bako          #+#    #+#             */
+/*   Updated: 2022/10/07 16:34:24 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
-char	*ft_strnstr(const	char *haystack, const	char *needle, size_t len)
+#include "libft.h"
+
+char	*ft_strnstr(const	char *s1, const	char *s2, size_t len)
 {
 	size_t	i;
 	size_t	a;
 	size_t	n_len;
-	char	*hay;
+	char	*str;
 
 	i = 0;
-	n_len = strlen(needle);
-	hay = (char *)haystack;
-	if (n_len == 0 || haystack == needle)
-		return (hay);
-	while (hay[i] && i < len)
+	n_len = ft_strlen(s2);
+	str = (char *)s1;
+	if (n_len == 0 || s1 == s2)
+		return (str);
+	while (str[i] && i < len)
 	{
 		a = 0;
-		while (hay[a + i] && needle[a] && i + a < len
-			&& hay[a + i] == needle[a])
+		while (str[a + i] && s2[a] && i + a < len
+			&& str[a + i] == s2[a])
 			a++;
 		if (a == n_len)
-			return (hay + i);
+			return (str + i);
 		i++;
 	}
 	return (0);
 }
-
-// int main() {
-//   char *hay = "hello world ana jay";
-//   char *nee = "world";
-//   printf("%s", ft_strnstr(hay, nee, 12));
-
-//   return 0;
-// }
