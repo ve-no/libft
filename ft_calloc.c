@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 08:29:10 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/10/10 11:22:16 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/10/20 11:34:32 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,7 @@ void	*ft_calloc(size_t count, size_t size)
 	i = 0;
 	if (count == SIZE_MAX || size == SIZE_MAX)
 		return (NULL);
-	size = size * count;
-	ptr = malloc(size);
+	ptr = malloc(size * count);
 	if (!ptr)
 		return (NULL);
 	while (size > i)
@@ -36,9 +35,8 @@ void	*ft_calloc(size_t count, size_t size)
 }
 // int	main()
 // {
-// 	char	str[] = "hello world";
 // 	char	*ptr;
 // 	ptr = "hello world";
-// 	ptr = (char *)ft_calloc(5, 1);
-// 	printf("%lu\n", strlen(ptr));
+// 	ptr = (char *)ft_calloc(SIZE_MAX  , SIZE_MAX);
+// 	printf("%s\n", ptr);
 // }

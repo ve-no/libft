@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 09:59:44 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/10/08 12:53:35 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/10/17 18:41:11 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	i = 0;
 	dest = (unsigned char *) dst;
 	str = (unsigned char *) src;
-	if (!dest && !str)
+	if (!str)
 		return (NULL);
 	while (n > i)
 	{

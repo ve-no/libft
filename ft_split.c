@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 18:40:38 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/10/10 14:05:18 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/10/19 13:58:31 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ char	**ft_split(char const *s, char c)
 		}
 		i++;
 	}
-	ptr[j] = 0;
+	ptr[j] = NULL;
 	return (ptr);
 }
 // int	main() {

@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 23:17:03 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/10/08 15:08:52 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/10/20 11:34:41 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,3 +57,11 @@ char	*ft_itoa(int n)
 	arr[size(n) - i++] = (res % 10) + '0';
 	return (arr);
 }
+
+// int main()
+// {
+// 	unsigned long long a = 922337203685477587;
+// 	char *ptr = ft_itoa(123456789);
+// 	char *ptr2 = ft_itoa(a);
+// 	printf("%s:****:%s",ptr, ptr2);
+// }

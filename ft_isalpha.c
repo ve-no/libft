@@ -6,11 +6,11 @@
 /*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 22:44:25 by ael-b             #+#    #+#             */
-/*   Updated: 2022/10/06 13:49:14 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/10/19 11:12:19 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(char c)
+int	ft_isalpha(int c)
 {
 	if ((c <= 'z' && c >= 'a') || (c <= 'Z' && c >= 'A'))
 		return (1);
