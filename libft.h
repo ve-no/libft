@@ -6,16 +6,15 @@
 /*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 13:37:39 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/10/20 12:02:18 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/10/21 18:23:04 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+# include <unistd.h>
+# include <stdio.h>
+# include <stdlib.h>
 
 typedef struct s_list
 {
@@ -65,7 +64,7 @@ void		ft_lstadd_back(t_list **lst, t_list *new);
 void		ft_lstiter(t_list *lst, void (*f)(void *));
 void		ft_lstadd_front(t_list **lst, t_list *new);
 void		ft_lstclear(t_list **lst, void (*del)(void *));
-void		ft_lstdelone( t_list *lst, void (*del)(void *));
+void		ft_lstdelone(t_list *lst, void (*del)(void *));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif

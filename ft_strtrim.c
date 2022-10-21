@@ -6,14 +6,14 @@
 /*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 18:26:31 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/10/08 18:42:45 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/10/21 18:38:20 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
 
-int	check_set(char const *set, int s)
+static int	check_set(char const *set, int s)
 {
 	int	i;
 

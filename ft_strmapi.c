@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 11:46:46 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/10/17 18:04:05 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/10/20 19:34:56 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		i;
 
 	str = ft_strdup(s);
+	if (!str)
+		return (NULL);
 	i = 0;
 	while (str[i])
 	{

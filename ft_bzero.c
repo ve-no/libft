@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/06 12:32:28 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/10/20 11:04:07 by ael-bako         ###   ########.fr       */
+/*   Created: 2022/10/19 17:50:48 by ael-bako          #+#    #+#             */
+/*   Updated: 2022/10/19 17:50:55 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,3 @@ void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }
-
-// int main()
-// {
-// 	char s[] = "       hello world";
-// 	ft_bzero(s, 15),
-// 	printf(":%zu:\n", ft_strlen(s));
-// }
