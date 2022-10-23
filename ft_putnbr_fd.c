@@ -32,3 +32,14 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd(n % 10 + '0', fd);
 	}
 }
+// #include<fcntl.h>
+// int main()
+// {
+// 	int i = 0;
+// 	int fd = open("test.c",  O_WRONLY | O_CREAT );
+// 	while(i < 100){
+// 		ft_putnbr_fd(1+ i, fd);
+// 		ft_putchar_fd('\n', fd);
+// 		i++;
+// 	}
+// }
