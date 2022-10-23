@@ -29,7 +29,7 @@ BONUS= ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 
 BOBJ=$(BONUS:.c=.o)
 
-%.o:%.c
+%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
