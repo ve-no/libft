@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 08:29:10 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/10/21 17:21:55 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/10/24 13:25:51 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,8 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(ptr, size * count);
 	return (ptr);
 }
+
+// int main()
+// {
+// 	printf()
+// }

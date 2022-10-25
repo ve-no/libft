@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 18:40:38 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/10/22 15:55:06 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/10/23 19:17:01 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,20 +65,14 @@ static char	**ft_error(char **ptr)
 	return (NULL);
 }
 
-char	**ft_split(char const *s, char c)
+char	**make_s(const char *s, char **ptr, char c, int start)
 {
-	char	**ptr;
-	int		i;
-	int		start;
-	int		j;
+	int	i;
+	int	j;
 
-	i = -1;
+	i = 0;
 	j = 0;
-	start = -1;
-	ptr = malloc((count_w(s, c) + 1) * sizeof(char *));
-	if (!s || !ptr)
-		return (NULL);
-	while (++i <= (int)ft_strlen(s))
+	while (i <= (int)ft_strlen(s))
 	{
 		if (s[i] != c && start < 0)
 			start = i;
@@ -89,7 +83,23 @@ char	**ft_split(char const *s, char c)
 				return (ft_error(ptr));
 			start = -1;
 		}
+		i++;
 	}
 	ptr[j] = 0;
+	return (ptr);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**ptr;
+	int		start;
+
+	start = -1;
+	if (!s)
+		return (NULL);
+	ptr = malloc((count_w(s, c) + 1) * sizeof(char *));
+	if (!ptr)
+		return (NULL);
+	ptr = make_s(s, ptr, c, start);
 	return (ptr);
 }

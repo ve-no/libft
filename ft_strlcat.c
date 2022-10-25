@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 14:20:25 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/10/20 14:08:12 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/10/23 20:41:51 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	res;
 	size_t	i;
 
+	if (!dest && size == 0)
+		return (ft_strlen(src));
 	i = 0;
 	dest_len = ft_strlen(dest);
 	src_len = ft_strlen(src);

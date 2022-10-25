@@ -6,13 +6,14 @@
 /*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 15:43:37 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/10/07 16:34:24 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/10/24 12:16:06 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-char	*ft_strnstr(const	char *s1, const	char *s2, size_t len)
+char	*ft_strnstr(const char *s1, const	char *s2, size_t len)
 {
 	size_t	i;
 	size_t	a;

@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:38:44 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/10/21 19:03:12 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/10/24 13:32:59 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,10 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (check_res(rslt, sign));
+}
+
+int main()
+{
+	printf("%d\n", ft_atoi("-2474813649"));
+	printf("%d", atoi("-92233720368547758"));
 }

@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 17:08:25 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/10/06 18:00:45 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/10/23 20:26:14 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd(n % 10 + '0', fd);
 	}
 }
-// #include<fcntl.h>
-// int main()
-// {
-// 	int i = 0;
-// 	int fd = open("test.c",  O_WRONLY | O_CREAT );
-// 	while(i < 100){
-// 		ft_putnbr_fd(1+ i, fd);
-// 		ft_putchar_fd('\n', fd);
-// 		i++;
-// 	}
-// }

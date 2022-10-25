@@ -6,7 +6,7 @@
 #    By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/06 13:37:46 by ael-bako          #+#    #+#              #
-#    Updated: 2022/10/22 17:07:02 by ael-bako         ###   ########.fr        #
+#    Updated: 2022/10/24 12:06:19 by ael-bako         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,14 +44,6 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
 bonus: $(NAME) $(BOBJ)
 	ar -crs $(NAME) $(BOBJ)
-
-# ar rcs libout.a out.o
-# This creates the static library.
-#  r means to insert with replacement, c means to create a new archive,
-#  and s means to write an index. As always,
-
-# r - replace files existing inside the archive
-# c - create a archive if not already existent
-# s - create an object-file index into the archive

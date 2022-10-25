@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 14:34:34 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/10/14 16:32:13 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/10/24 11:24:16 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,11 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;
 
-	last = *lst;
+	if (!lst)
+		return ;
 	if (*lst)
 	{
+		last = *lst;
 		last = ft_lstlast(*lst);
 		last->next = new;
 	}

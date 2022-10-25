@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 18:26:31 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/10/21 18:38:20 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/10/23 20:39:51 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*ptr;
 	int		i;
 
+	if (!s1 || !set)
+		return (NULL);
 	i = 0;
 	ptr = (char *)s1;
 	len = (int)ft_strlen (s1) - 1;
