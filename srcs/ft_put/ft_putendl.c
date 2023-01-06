@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/06 14:12:31 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/10/06 14:12:37 by ael-bako         ###   ########.fr       */
+/*   Created: 2022/10/06 16:58:23 by ael-bako          #+#    #+#             */
+/*   Updated: 2023/01/06 14:28:07 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
-{
-	char	*str;
-	int		i;
+#include "libft.h"
 
-	i = 0;
-	str = (char *) s;
-	while (str[i] != (char) c)
-	{
-		if (str[i] == '\0')
-			return (0);
-		++i;
-	}
-	return (str + i);
+void	ft_putendl(char *s)
+{
+	ft_putstr(s);
+	write(1, "\n", 1);
 }

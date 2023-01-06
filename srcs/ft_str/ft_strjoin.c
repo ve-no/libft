@@ -3,34 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 17:45:53 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/10/07 18:18:11 by ael-bako         ###   ########.fr       */
+/*   Updated: 2023/01/06 16:26:58 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char *s1, char *s2)
 {
-	char	*str;
 	size_t	i;
-	size_t	k;
+	size_t	c;
+	char	*str;
 
+	if (!s1)
+	{
+		s1 = (char *)malloc(1 * sizeof(char));
+		s1[0] = '\0';
+	}
 	if (!s1 || !s2)
 		return (NULL);
-	k = ft_strlen(s1) + ft_strlen(s2) +1;
-	str = (char *)malloc(k);
-	if (!str)
+	str = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
+	if (str == NULL)
 		return (NULL);
-	i = 0;
-	k = 0;
-	while (i < ft_strlen(s1))
-		str[k++] = s1[i++];
-	i = 0;
-	while (i < ft_strlen(s2))
-		str[k++] = s2[i++];
-	str[k] = '\0';
+	i = -1;
+	c = 0;
+	if (s1)
+		while (s1[++i] != '\0')
+			str[i] = s1[i];
+	while (s2[c] != '\0')
+		str[i++] = s2[c++];
+	str[ft_strlen(s1) + ft_strlen(s2)] = '\0';
+	free(s1);
 	return (str);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:38:44 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/10/24 13:32:59 by ael-bako         ###   ########.fr       */
+/*   Updated: 2023/01/06 15:14:51 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,4 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (check_res(rslt, sign));
-}
-
-int main()
-{
-	printf("%d\n", ft_atoi("-2474813649"));
-	printf("%d", atoi("-92233720368547758"));
 }

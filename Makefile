@@ -3,47 +3,50 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ael-bako <ael-bako@student.1337.ma>        +#+  +:+       +#+         #
+#    By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/06 13:37:46 by ael-bako          #+#    #+#              #
-#    Updated: 2022/10/24 12:06:19 by ael-bako         ###   ########.fr        #
+#    Updated: 2023/01/06 16:03:50 by ael-bako         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC=cc
-NAME=libft.a
-CFLAGS=-Wall -Wextra -Werror
+NAME	= libft.a
 
-SRC= ft_atoi.c ft_isalpha.c ft_putchar_fd.c ft_strchr.c ft_tolower.c ft_strnstr.c \
-	ft_bzero.c ft_isascii.c ft_memcpy.c ft_putendl_fd.c ft_strlen.c ft_toupper.c \
-	ft_calloc.c ft_isdigit.c ft_memmove.c ft_putnbr_fd.c ft_strrchr.c ft_strncmp.c \
-	ft_isalnum.c ft_isprint.c ft_memset.c ft_putstr_fd.c ft_substr.c ft_strjoin.c \
-	ft_memchr.c ft_memcmp.c ft_strdup.c ft_strlcpy.c ft_strlcat.c ft_itoa.c \
-	ft_striteri.c ft_strmapi.c ft_split.c ft_strtrim.c \
+DIR_SRCS	= srcs
+DIR_OBJS	= objs
+SUBDIRS		= ft_is ft_to ft_mem ft_str ft_put ft_lst gnl printf
 
-OBJ=$(SRC:.c=.o)
+SRCS_DIRS	= $(foreach dir, $(SUBDIRS), $(addprefix $(DIR_SRCS)/, $(dir)))
+OBJS_DIRS	= $(foreach dir, $(SUBDIRS), $(addprefix $(DIR_OBJS)/, $(dir)))
+SRCS		= $(foreach dir, $(SRCS_DIRS), $(wildcard $(dir)/*.c))
+OBJS		= $(subst $(DIR_SRCS), $(DIR_OBJS), $(SRCS:.c=.o))
 
-BONUS= ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
-	ft_lstiter_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
-	ft_lstlast_bonus.c ft_lstclear_bonus.c ft_lstmap_bonus.c \
+INCLUDES	= -I inc
 
-BOBJ=$(BONUS:.c=.o)
+CC		= clang
+CFLAGS	= -Wall -Wextra -Werror
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+$(DIR_OBJS)/%.o :	$(DIR_SRCS)/%.c
+			@mkdir -p $(DIR_OBJS) $(OBJS_DIRS)
+			@printf "\033[0;33mGenerating pipex objects... %-100.900s\r" $@
+			@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
-all: $(NAME)
+all:		$(NAME)
 
-$(NAME): $(OBJ)
-	ar -crs $(NAME) $(OBJ)
+$(NAME):	$(OBJS)
+			@echo "\033[0;32m\n\nCompiling libft..."
+			@ar -crs $(NAME) $(OBJS)
+			@echo "\n\033[0mDone !"
 
 clean:
-	rm -f $(OBJ) $(BOBJ)
+			@echo "\033[0;31m\nDeleting objects..."
+			@rm -rf $(OBJS)
+			@rm -rf $(DIR_OBJS)
 
-fclean: clean
-	rm -f $(NAME)
+fclean:		clean
+			@echo "\nDeleting executable..."
+			@rm -rf $(NAME)
 
-re: fclean all
+re:			fclean all
 
-bonus: $(NAME) $(BOBJ)
-	ar -crs $(NAME) $(BOBJ)
+.PHONY:		all clean fclean re
