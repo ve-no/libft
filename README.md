@@ -57,15 +57,15 @@ For detailed information, refer to the [**subject of this project**](https://git
 |        |—— ft_isxdigit.c   			// hexadecimal-digit character test
 |        |—— ft_swap.c       			// swap value of two integers.
 |    |—— ft_lst
-|        |—— ft_lstadd_back_bonus.c   	// add new element at end of list.
-|        |—— ft_lstadd_front_bonus.c  	// add new element at beginning of list.
-|        |—— ft_lstclear_bonus.c      	// delete sequence of elements of list from a starting point.
-|        |—— ft_lstdelone_bonus.c     	// delete element from list.
-|        |—— ft_lstiter_bonus.c       	// apply function to content of all lists elements.
-|        |—— ft_lstlast_bonus.c       	// find last element of list.
-|        |—— ft_lstmap_bonus.c        	// apply function to content of all lists elements into new list.
-|        |—— ft_lstnew_bonus.c     	    // create new list.
-|        |—— ft_lstsize_bonus.c         // count elements of a list.
+|        |—— ft_lstadd_back_bonus.c   		// add new element at end of list.
+|        |—— ft_lstadd_front_bonus.c  		// add new element at beginning of list.
+|        |—— ft_lstclear_bonus.c      		// delete sequence of elements of list from a starting point.
+|        |—— ft_lstdelone_bonus.c     		// delete element from list.
+|        |—— ft_lstiter_bonus.c       		// apply function to content of all lists elements.
+|        |—— ft_lstlast_bonus.c       		// find last element of list.
+|        |—— ft_lstmap_bonus.c        		// apply function to content of all lists elements into new list.
+|        |—— ft_lstnew_bonus.c     	   	 	// create new list.
+|        |—— ft_lstsize_bonus.c         	// count elements of a list.
 |    |—— ft_mem
 |        |—— ft_bzero.c   			// write zeroes to a byte string.
 |        |—— ft_calloc.c  			//  memory allocation.
@@ -81,7 +81,7 @@ For detailed information, refer to the [**subject of this project**](https://git
 |        |—— ft_putendl_fd.c   		// output string to given file with newline.
 |        |—— ft_putnbr.c       		//  output integer to stdout.
 |        |—— ft_putnbr_fd.c    		// output integer to given file.
-|        |—— ft_putstr.c       		// output string to stdout.
+|        |—— ft_putstr.c       		// output string to s	tdout.
 |        |—— ft_putstr_fd.c    		// output string to given file.
 |    |—— ft_str
 |        |—— ft_split.c  			// split string, with specified character as delimiter, into an array of strings.
