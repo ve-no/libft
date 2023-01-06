@@ -67,13 +67,13 @@ For detailed information, refer to the [**subject of this project**](https://git
 |        |—— ft_lstnew_bonus.c        		// create new list.
 |        |—— ft_lstsize_bonus.c       		// count elements of a list.
 |    |—— ft_mem
-|        |—— ft_bzero.c   					// write zeroes to a byte string.
-|        |—— ft_calloc.c  					//  memory allocation.
-|        |—— ft_memchr.c  					// locate byte in byte string.
-|        |—— ft_memcmp.c  					// compare byte string.
-|        |—— ft_memcpy.c  					// copy memory area.
-|        |—— ft_memmove.c 					// copy byte string.
-|        |—— ft_memset.c  					// write a byte to a byte string.
+|        |—— ft_bzero.c   			// write zeroes to a byte string.
+|        |—— ft_calloc.c  			//  memory allocation.
+|        |—— ft_memchr.c  			// locate byte in byte string.
+|        |—— ft_memcmp.c  			// compare byte string.
+|        |—— ft_memcpy.c  			// copy memory area.
+|        |—— ft_memmove.c 			// copy byte string.
+|        |—— ft_memset.c  			// write a byte to a byte string.
 |    |—— ft_put
 |        |—— ft_putchar.c 	   				// output a character to stdout.
 |        |—— ft_putchar_fd.c   				// output a character to given file.
@@ -116,4 +116,3 @@ For detailed information, refer to the [**subject of this project**](https://git
 |        |—— ft_printunsigned.c 			// %u unsigned int
 |        |—— ft_utils.c
 ```
-	
