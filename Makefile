@@ -6,7 +6,7 @@
 #    By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/06 13:37:46 by ael-bako          #+#    #+#              #
-#    Updated: 2023/01/06 16:03:50 by ael-bako         ###   ########.fr        #
+#    Updated: 2023/01/06 16:56:49 by ael-bako         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ $(DIR_OBJS)/%.o :	$(DIR_SRCS)/%.c
 all:		$(NAME)
 
 $(NAME):	$(OBJS)
-			@echo "\033[0;32m\n\nCompiling libft..."
+			@echo "\033[0;32m\n\nCompiling  libft..."
 			@ar -crs $(NAME) $(OBJS)
 			@echo "\n\033[0mDone !"
 
