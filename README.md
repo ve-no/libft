@@ -1,44 +1,46 @@
-Title
-===
-Abstract:xxx
-## Papar Information
-- Title:  `paper name`
-- Authors:  `A`,`B`,`C`
-- Preprint: [https://arxiv.org/abs/xx]()
-- Full-preprint: [paper position]()
-- Video: [video position]()
-
-## Install & Dependence
-- python
-- pytorch
-- numpy
-
-## Dataset Preparation
-| Dataset | Download |
-| ---     | ---   |
-| dataset-A | [download]() |
-| dataset-B | [download]() |
-| dataset-C | [download]() |
-
-## Use
-- for train
-  ```
-  python train.py
-  ```
-- for test
-  ```
-  python test.py
-  ```
-## Pretrained model
-| Model | Download |
-| ---     | ---   |
-| Model-1 | [download]() |
-| Model-2 | [download]() |
-| Model-3 | [download]() |
 
 
+<h1 align="center">
+	42cursus' libft
+</h1>
+
+<p align="center">
+	<b><i>Development repo for 42cursus' libft project</i></b><br>
+	For further information about 42cursus and its projects, please refer to <a href="https://github.com/appinha/42cursus"><b>42cursus repo</b></a>.
+</p>
+
+<p align="center">
+	<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/Aelbakouri/libft?color=blueviolet" />
+	<img alt="Number of lines of code" src="https://img.shields.io/tokei/lines/github/Aelbakouri/libft?color=blueviolet" />
+	<img alt="Code language count" src="https://img.shields.io/github/languages/count/Aelbakouri/libft?color=blue" />
+	<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Aelbakouri/libft?color=blue" />
+	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Aelbakouri/libft?color=brightgreen" />
+</p>
+
+<h3 align="center">
+	<a href="#%EF%B8%8F-about">About</a>
+	<span> · </span>
+	<a href="#-index">Index</a>
+	<span> · </span>
+	<a href="#%EF%B8%8F-usage">Usage</a>
+	<span> · </span>
+	<a href="#-testing">Testing</a>
+</h3>
+
+---
+
+## 🗣️ About
+
+> _The aim of this project is to code a C library regrouping usual functions that you'll be allowed to use in all your other projects._
+
+For detailed information, refer to the [**subject of this project**](https://github.com/appinha/42cursus/tree/master/_PDFs).
+
+	🚀 TLDR: this project consists of coding basic C functions (see below), which are then compiled
+	into a library for use in other projects of the cursus.
+
+[`ft_isascii`](srcs/ft_is/ft_isascii.c)
 ## Directory Hierarchy
-```diff
+```bash
 |—— Makefile
 |—— inc
 |    |—— libft.h
@@ -114,32 +116,4 @@ Abstract:xxx
 |        |—— ft_printptr.c
 |        |—— ft_printunsigned.c
 |        |—— ft_utils.c
-```
-## Code Details
-### Tested Platform
-- software
-  ```diff
-  OS: Debian unstable (May 2021), Ubuntu LTS
-  Python: 3.8.5 (anaconda)
-  PyTorch: 1.7.1, 1.8.1
-  ```
-- hardware
-  ```
-  CPU: Intel Xeon 6226R
-  GPU: Nvidia RTX3090 (24GB)
-  ```
-### Hyper parameters
-```
-```
-## References
-- [paper-1]()
-- [paper-2]()
-- [code-1](https://github.com)
-- [code-2](https://github.com)
-
-## License
-
-## Citing
-If you use xxx,please use the following BibTeX entry.
-```
 ```
