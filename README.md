@@ -55,19 +55,19 @@ For detailed information, refer to the [**subject of this project**](https://git
 |        |—— ft_isprint.c		//  printing character test (space character inclusive).
 |        |—— ft_isspace.c		// white-space character test.
 |        |—— ft_isxdigit.c		// hexadecimal-digit character test
-|        |—— ft_swap.c		// swap value of two integers.
+|        |—— ft_swap.c			// swap value of two integers.
 |    |—— ft_lst
-|        |—— ft_lstadd_back_bonus.c		// add new element at end of list.
-|        |—— ft_lstadd_front_bonus.c		// add new element at beginning of list.
-|        |—— ft_lstclear_bonus.c		// delete sequence of elements of list from a starting point.
-|        |—— ft_lstdelone_bonus.c		// delete element from list.
+|        |—— ft_lstadd_back_bonus.c	// add new element at end of list.
+|        |—— ft_lstadd_front_bonus.c	// add new element at beginning of list.
+|        |—— ft_lstclear_bonus.c	// delete sequence of elements of list from a starting point.
+|        |—— ft_lstdelone_bonus.c	// delete element from list.
 |        |—— ft_lstiter_bonus.c		// apply function to content of all lists elements.
 |        |—— ft_lstlast_bonus.c		// find last element of list.
 |        |—— ft_lstmap_bonus.c		// apply function to content of all lists elements into new list.
 |        |—— ft_lstnew_bonus.c		// create new list.
 |        |—— ft_lstsize_bonus.c		// count elements of a list.
 |    |—— ft_mem
-|        |—— ft_bzero.c		// write zeroes to a byte string.
+|        |—— ft_bzero.c			// write zeroes to a byte string.
 |        |—— ft_calloc.c		//  memory allocation.
 |        |—— ft_memchr.c		// locate byte in byte string.
 |        |—— ft_memcmp.c		// compare byte string.
@@ -84,7 +84,7 @@ For detailed information, refer to the [**subject of this project**](https://git
 |        |—— ft_putstr.c		// output string to s	tdout.
 |        |—— ft_putstr_fd.c		// output string to given file.
 |    |—— ft_str
-|        |—— ft_split.c		// split string, with specified character as delimiter, into an array of strings.
+|        |—— ft_split.c			// split string, with specified character as delimiter, into an array of strings.
 |        |—— ft_strcat.c		// concatenate strings (s2 into s1).
 |        |—— ft_strchr.c		// locate character in string (first occurrence).
 |        |—— ft_strdup.c		// save a copy of a string (with malloc).
@@ -102,13 +102,13 @@ For detailed information, refer to the [**subject of this project**](https://git
 |        |—— ft_strtrim.c		// trim beginning and end of string with the specified characters.
 |        |—— ft_substr.c		// extract substring from string.
 |    |—— ft_to
-|        |—— ft_atoi.c		// convert ASCII string to integer.
-|        |—— ft_itoa.c		// convert integer to ASCII string.
+|        |—— ft_atoi.c			// convert ASCII string to integer.
+|        |—— ft_itoa.c			// convert integer to ASCII string.
 |        |—— ft_tolower.c		// upper case to lower case letter conversion.
 |        |—— ft_toupper.c		// lower case to upper case letter conversion.
 |    |—— gnl
 |        |—— get_next_line.c		// return a line from given fd
-|        |—— gnl.c		// read from standard input and return line
+|        |—— gnl.c			// read from standard input and return line
 |    |—— printf
 |        |—— ft_printf.c		// function takes a format string as its first argument, followed by a set of variables
 |        |—— ft_printhex.c		// print hexadecimal format %x and %X
