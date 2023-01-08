@@ -138,3 +138,7 @@ and, when compiling your code, add the required flags:
 ```shell
 -lft -L path/to/libft.a -I path/to/libft.h
 ```
+Made with :heart: by <a href="https://github.com/Aelbakouri" target="_blank">Aelbakouri</a>
+
+&#xa0;
+<a href="#top">Back to top</a>
