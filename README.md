@@ -17,6 +17,9 @@
 	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Aelbakouri/libft?color=brightgreen" />
 </p>
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a7ea133692384ce898799f497288e766)](https://app.codacy.com/gh/Aelbakouri/libft?utm_source=github.com&utm_medium=referral&utm_content=Aelbakouri/libft&utm_campaign=Badge_Grade_Settings)
+![Norminette](https://github.com/Aelbakouri/libft/workflows/norminette3/badge.svg)
+
 
 
 ---
