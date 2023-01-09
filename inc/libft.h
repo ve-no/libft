@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 13:37:39 by ael-bako          #+#    #+#             */
-/*   Updated: 2023/01/06 16:49:57 by ael-bako         ###   ########.fr       */
+/*   Updated: 2023/01/09 11:01:57 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,8 @@ char		*ft_strchr(char *s, int c);
 size_t		ft_strlen(const char *str);
 char		*ft_strdup(const char *s1);
 char		*ft_strndup(char *str, unsigned int n);
+int			ft_rcmp(char *s1, char *s2);
+void		free_tab(char **error);
 /* end */
 
 /* ft_to */
