@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 13:37:39 by ael-bako          #+#    #+#             */
-/*   Updated: 2023/01/09 11:01:57 by ael-bako         ###   ########.fr       */
+/*   Updated: 2023/05/31 17:06:12 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 # include <stdio.h>
 # include <fcntl.h>
 # include <stdarg.h>
-
 
 typedef struct s_list
 {
@@ -84,11 +83,18 @@ size_t		ft_strlcpy(char *dest, const char *src, size_t size);
 size_t		ft_strlcat(char *dest, const char *src, size_t size);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
 void		ft_striteri(char *s, void (*f)(unsigned int, char*));
+char		**ft_extend_matrix(char **in, char *newstr);
 char		*ft_strtrim(char const *s1, char const *set);
+char		**ft_matrix_replace_in(char ***big, char **small, int n);
+int			ft_strchars_i(const char *s, char *set);
 char		*ft_strjoin(char *s1, char *s2);
+int			ft_strchr_i(const char *s, int c);
 char		**ft_split(char const *s, char c);
 char		*ft_strrchr(const char *s, int c);
 char		*ft_strchr(char *s, int c);
+void		ft_free_matrix(char ***m);
+int			ft_matrixlen(char **m);
+char		**ft_dup_matrix(char **m);
 size_t		ft_strlen(const char *str);
 char		*ft_strdup(const char *s1);
 char		*ft_strndup(char *str, unsigned int n);
@@ -102,22 +108,21 @@ int			ft_toupper(int c);
 int			ft_tolower(int c);
 char		*ft_itoa(int n);
 /* end */
-/* printf */
-int		ft_printunsigned(unsigned int n);
-int		ft_printf(const char *format, ...);
-int		ft_printhex(unsigned int num, const char format);
-int		ft_printptr(unsigned long long ptr);
-int		ft_printstr(char *str);
-int		ft_printnbr(int n);
-int		ft_printchar(int c);
+int			ft_printunsigned(unsigned int n);
+int			ft_printf(const char *format, ...);
+int			ft_printhex(unsigned int num, const char format);
+int			ft_printptr(unsigned long long ptr);
+int			ft_printstr(char *str);
+int			ft_printnbr(int n);
+int			ft_printchar(int c);
 /* end */
 
 /* gnl */
-char	*get_next_line(int fd);
-char	*ft_get_line(char *str);
-char	*ft_save(char *str);
-char	*ft_read(int fd, char *str);
-int		gnl(char **line);
+char		*get_next_line(int fd);
+char		*ft_get_line(char *str);
+char		*ft_save(char *str);
+char		*ft_read(int fd, char *str);
+int			gnl(char **line);
 /* end */
 
 #endif
