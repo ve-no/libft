@@ -38,8 +38,6 @@ For detailed information, refer to the [**subject of this project**](https://git
 |—— Makefile
 |—— inc
 |    |—— libft.h
-|—— pdf
-|    |—— en.subject.pdf
 |—— srcs
 |    |—— ft_is
 |        |—— ft_isalnum.c		//alphanumeric character test.
